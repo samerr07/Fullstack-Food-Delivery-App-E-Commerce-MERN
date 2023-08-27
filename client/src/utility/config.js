@@ -1,1 +1,1 @@
-export const BASEURL = "http://localhost:8080/api/v1"
+export const BASEURL = "https://backend-blond-tau.vercel.app/api/v1"
