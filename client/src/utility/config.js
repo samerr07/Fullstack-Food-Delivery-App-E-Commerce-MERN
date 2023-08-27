@@ -1,1 +1,1 @@
-export const BASEURL = "https://backend-git-main-samerr07.vercel.app/api/v1"
+export const BASEURL = "https://backend-kappa-six.vercel.app/api/v1"
