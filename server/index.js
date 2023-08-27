@@ -10,10 +10,6 @@ const server = express();
 
 //middlewares
 dotenv.config()
-server.use(cors());
-server.use(express.json({limit:"10mb"}));
-server.use("/api/v1/user",userRouter.router);
-server.use("/api/v1/product",productRouter.router);
 
 //connecting a database
 main().catch(err => console.log(err));
@@ -22,6 +18,13 @@ async function main() {
     await mongoose.connect('mongodb+srv://codersam:SjjKsp1l26C5yzlt@cluster0.zqjxscu.mongodb.net/?retryWrites=true&w=majority');
     console.log("Database Connected")
 }
+
+server.use(cors());
+server.use(express.json({limit:"10mb"}));
+server.use("/api/v1/user",userRouter.router);
+server.use("/api/v1/product",productRouter.router);
+
+
 
 
 server.get("/",(req,res)=>{
