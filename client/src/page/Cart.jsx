@@ -26,7 +26,7 @@ const Cart = () => {
   );
 
   const handlePayment = async () => {
-    // console.log("button")
+    console.log("button")
     if (user.email) {
       const stripePromise = await loadStripe(
         process.env.REACT_APP_STRIPE_PUBLIC_KEY
